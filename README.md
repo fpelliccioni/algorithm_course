@@ -1,8 +1,7 @@
 # Charlas sobre Algoritmos por videoconferencia (Draft)
 
----
-Por ahora esto es un borrador, puede tener faltas de ortografía, puede estar mal ordenado o catalogado, y tengo muchas cosas en spanglish.
----
+
+> Por ahora esto es un borrador, puede tener faltas de ortografía, puede estar mal ordenado o catalogado, y tengo muchas cosas en spanglish.
 
 ## Algoritmos de Selección
 - mínimo entre 2 elementos
