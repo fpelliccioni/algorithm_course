@@ -1,7 +1,12 @@
 # Charlas sobre Algoritmos por videoconferencia (Draft)
 
-
 > Por ahora esto es un borrador, puede tener faltas de ortografía, puede estar mal ordenado o catalogado, y tengo muchas cosas en spanglish.
+
+## Conceptos generales
+- Estructuras lineales
+- Concepto de rangos
+- Contract Programming: precondiciones, postcondiciones, class invariant, loop invariant. 
+- Complejidad computacional
 
 ## Algoritmos de Selección
 - mínimo entre 2 elementos
@@ -78,7 +83,7 @@
 `TODO: Completar la lista`
 
 ## Heaps
-
+`TODO: Completar la lista`
 
 ## Algoritmos de ordenamiento
 - Selection sort
