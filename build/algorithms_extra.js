@@ -1,8 +1,8 @@
 function __catalog() {
-return {find: [ 'search/lineal', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/lineal/find.js' ],
-find_if: [ 'search/lineal', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/lineal/find_if.js' ],
-find_unguarded: [ 'search/lineal', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/lineal/find_unguarded.js' ],
-find_with_sentinel: [ 'search/lineal', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/lineal/find_with_sentinel.js' ],
+return {find: [ 'search/linear', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/linear/find.js' ],
+find_if: [ 'search/linear', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/linear/find_if.js' ],
+find_unguarded: [ 'search/linear', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/linear/find_unguarded.js' ],
+find_with_sentinel: [ 'search/linear', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/linear/find_with_sentinel.js' ],
 max: [ 'selection', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/selection/max.js' ],
 max_element: [ 'selection', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/selection/max_element.js' ],
 min: [ 'selection', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/selection/min.js' ],
