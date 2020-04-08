@@ -1,5 +1,5 @@
 function find(f, l, x) {
-    while ( ! equal(f, l) && ! source(f) != x) {
+    while ( ! equal(f, l) && source(f) != x) {
         f = successor(f)
     }
     return f;
