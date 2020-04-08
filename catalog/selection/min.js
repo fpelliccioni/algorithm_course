@@ -1,5 +1,5 @@
-function max(a, b, r) {
-    return r(b, a) ? a : b;
+function min(a, b, r) {
+    return r(b, a) ? b : a;
 }
 
 function usage() {
@@ -7,7 +7,7 @@ function usage() {
     var a = tmp[0];
     var b = tmp[1];
     
-    var m = max(a, b, lt);
+    var m = min(a, b, lt);
     print(m);
 }
 
