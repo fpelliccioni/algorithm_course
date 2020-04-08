@@ -164,7 +164,8 @@ function minMaxElementEvenListIraPohl(list, r = lessThan, start = 0, end) {
   }
   return [min, max];
 }
-  function minMaxElementEvenListIraPohlWithStats(list, r = lessThan, start = 0, end) {
+
+function minMaxElementEvenListIraPohlWithStats(list, r = lessThan, start = 0, end) {
   nApplicationOfR = 0;
   end = end || list.length;
   if (start == end) {
