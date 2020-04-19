@@ -1,4 +1,5 @@
 function lower_bound_n(f, n, a, r) {
+    //precondition: is_sorted_n(f, n, r);
     var p = function p(x) {
         return ! r(x, a);
     };
