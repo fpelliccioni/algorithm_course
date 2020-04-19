@@ -118,7 +118,7 @@ function __find_unguarded_attributes() {}
 function __find_with_sentinel_usage() {
     var s = sequence(array_random(), "s");
 
-    var it = find_with_sentinel(begin(s), end(s), '99');
+    var it = find_with_sentinel(begin(s), end(s), 99);
     if ( ! equal(it, end(s))) {
         print(source(it));
     } else {
