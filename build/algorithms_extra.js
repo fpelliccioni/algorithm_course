@@ -1,6 +1,7 @@
 function __catalog() {
 return {lower_bound: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/lower_bound.js' ],
 lower_bound_n: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/lower_bound_n.js' ],
+lower_upper_bound_n: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/lower_upper_bound_n.js' ],
 partition_point_n: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/partition_point_n.js' ],
 partitioned: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/partitioned.js' ],
 partitioned_n: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/partitioned_n.js' ],

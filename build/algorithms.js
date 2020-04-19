@@ -10,6 +10,8 @@ function lower_bound_n(f, n, a, r) {
     return partition_point_n(f, n, p);
 }
 
+function lower_upper_bound_n(f, n, a, r) {}
+
 function partition_point_n(f, n, p) {
     //precondition: partitioned_n(f, n, p)
 

@@ -1,3 +1,4 @@
+function lower_upper_bound_n(f, n, a, r) {}
 
 function usage() {
     var a = 3;

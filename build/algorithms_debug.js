@@ -24,6 +24,15 @@ function lower_bound_n(f, n, a, r) {
     return res;
 }
 
+function __debug_lower_upper_bound_n(f, n, a, r) {}
+
+function lower_upper_bound_n(f, n, a, r) {
+    var _f_ = start_f('lower_upper_bound_n', f, n, a, r);
+    var res = __debug_lower_upper_bound_n(f, n, a, r);
+    end_f(_f_);
+    return res;
+}
+
 function __debug_partition_point_n(f, n, p) {
     //precondition: partitioned_n(f, n, p)
 
