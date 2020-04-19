@@ -1,3 +1,10 @@
+function lower_bound_n(f, n, a, r) {
+	var p = predicate(function p(x) {
+		return ! r(x, a);
+	});
+    return partition_point_n(f, n, p);
+}
+
 function partition_point_n(f, n, p) {
     //precondition: partitioned_n(f, n, p)
 
@@ -12,6 +19,25 @@ function partition_point_n(f, n, p) {
         }
     }
     return f;
+}
+
+function partitioned(f, l, p) {
+    return equal(l, 
+            find_if(
+                find_if(f, l, p), 
+                l, not(p)));
+}
+
+function partitioned_n(f, n, p) {
+    //TODO: pending
+    return true;
+}
+
+function upper_bound_n(f, n, a, r) {
+    var p = predicate(function p(x) {
+		return r(a, x);
+	});
+    return partition_point_n(f, n, p);
 }
 
 function find(f, l, x) {

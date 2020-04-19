@@ -1,5 +1,9 @@
 function __catalog() {
-return {partition_point_n: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/partition_point_n.js' ],
+return {lower_bound_n: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/lower_bound_n.js' ],
+partition_point_n: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/partition_point_n.js' ],
+partitioned: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/partitioned.js' ],
+partitioned_n: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/partitioned_n.js' ],
+upper_bound_n: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/upper_bound_n.js' ],
 find: [ 'search/linear', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/linear/find.js' ],
 find_if: [ 'search/linear', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/linear/find_if.js' ],
 find_unguarded: [ 'search/linear', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/linear/find_unguarded.js' ],
@@ -10,6 +14,19 @@ min: [ 'selection', 'https://github.com/fpelliccioni/algorithm_course/blob/maste
 min_element: [ 'selection', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/selection/min_element.js' ],
 minmax_element: [ 'selection', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/selection/minmax_element.js' ],
 };}
+
+function __lower_bound_n_usage() {
+    var s = sequence([1, 2, 2, 2, 3, 3, 3, 4, 7, 9, 9], "s");
+
+    var lb = lower_bound_n(begin(s), size(s), 3, lt);
+    if ( ! equal(lb, end(s)) && source(lb) == 3) {
+        print("Element found");
+    } else {
+        print("Element not found, but we have the insertion point in lb");
+    }
+}
+
+function __lower_bound_n_attributes() {}
 
 function __partition_point_n_usage() {
     var p = predicate(function greater_than_3(x) { return x > 3; });
@@ -24,6 +41,43 @@ function __partition_point_n_usage() {
 }
 
 function __partition_point_n_attributes() {}
+
+function __partitioned_usage() {
+    var p = predicate(function greater_than_3(x) { return x > 3; });
+    var s = sequence([1, 2, 2, 2, 3, 3, 3, 4, 7, 9, 9], "s", p);
+
+    var res = partitioned(begin(s), end(s), p);
+    if (res) {
+        print("The range is partitioned");
+    } else {
+        print("The range is NOT partitioned");
+    }
+}
+
+function __partitioned_attributes() {}
+
+function __partitioned_n_usage() {
+    var p = predicate(function greater_than_3(x) { return x > 3; });
+    var s = sequence([1, 2, 2, 2, 3, 3, 3, 4, 7, 9, 9], "s", p);
+
+    var res = partitionedt_n(begin(s), size(s), p);
+    if (res) {
+        print("The range is partitioned");
+    } else {
+        print("The range is NOT partitioned");
+    }
+}
+
+function __partitioned_n_attributes() {}
+
+function __upper_bound_n_usage() {
+    var s = sequence([1, 2, 2, 2, 3, 3, 3, 4, 7, 9, 9], "s");
+
+    var ub = upper_bound_n(begin(s), size(s), 3, lt);
+    print("Upper bound: " + source(ub));
+}
+
+function __upper_bound_n_attributes() {}
 
 function __find_usage() {
     print(array_from("Hello, World!"))

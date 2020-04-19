@@ -1,8 +1,3 @@
-function partitioned_n(f, n, p) {
-    //TODO: pending
-    return true;
-}
-
 function partition_point_n(f, n, p) {
     //precondition: partitioned_n(f, n, p)
 
