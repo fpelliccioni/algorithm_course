@@ -1,3 +1,14 @@
+function __debug_lower_bound(f, l, a, r) {
+    //TODO: pending see lower_bound_n
+}
+
+function lower_bound(f, l, a, r) {
+    var _f_ = start_f('lower_bound', f, l, a, r);
+    var res = __debug_lower_bound(f, l, a, r);
+    end_f(_f_);
+    return res;
+}
+
 function __debug_lower_bound_n(f, n, a, r) {
     var p = predicate(function p(x) {
         return ! r(x, a);
@@ -57,6 +68,17 @@ function __debug_partitioned_n(f, n, p) {
 function partitioned_n(f, n, p) {
     var _f_ = start_f('partitioned_n', f, n, p);
     var res = __debug_partitioned_n(f, n, p);
+    end_f(_f_);
+    return res;
+}
+
+function __debug_upper_bound(f, l, a, r) {
+    //TODO: pending, see upper_bound_n
+}
+
+function upper_bound(f, l, a, r) {
+    var _f_ = start_f('upper_bound', f, l, a, r);
+    var res = __debug_upper_bound(f, l, a, r);
     end_f(_f_);
     return res;
 }

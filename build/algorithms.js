@@ -1,3 +1,7 @@
+function lower_bound(f, l, a, r) {
+    //TODO: pending see lower_bound_n
+}
+
 function lower_bound_n(f, n, a, r) {
     var p = predicate(function p(x) {
         return ! r(x, a);
@@ -31,6 +35,10 @@ function partitioned(f, l, p) {
 function partitioned_n(f, n, p) {
     //TODO: pending
     return true;
+}
+
+function upper_bound(f, l, a, r) {
+    //TODO: pending, see upper_bound_n
 }
 
 function upper_bound_n(f, n, a, r) {

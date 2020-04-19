@@ -1,8 +1,10 @@
 function __catalog() {
-return {lower_bound_n: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/lower_bound_n.js' ],
+return {lower_bound: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/lower_bound.js' ],
+lower_bound_n: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/lower_bound_n.js' ],
 partition_point_n: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/partition_point_n.js' ],
 partitioned: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/partitioned.js' ],
 partitioned_n: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/partitioned_n.js' ],
+upper_bound: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/upper_bound.js' ],
 upper_bound_n: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/upper_bound_n.js' ],
 find: [ 'search/linear', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/linear/find.js' ],
 find_if: [ 'search/linear', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/linear/find_if.js' ],
@@ -14,6 +16,19 @@ min: [ 'selection', 'https://github.com/fpelliccioni/algorithm_course/blob/maste
 min_element: [ 'selection', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/selection/min_element.js' ],
 minmax_element: [ 'selection', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/selection/minmax_element.js' ],
 };}
+
+function __lower_bound_usage() {
+    var s = sequence([1, 2, 2, 2, 3, 3, 3, 4, 7, 9, 9], "s");
+
+    var lb = lower_bound(begin(s), end(s), 3, lt);
+    if ( ! equal(lb, end(s)) && source(lb) == 3) {
+        print("Element found");
+    } else {
+        print("Element not found, but we have the insertion point in lb");
+    }
+}
+
+function __lower_bound_attributes() {}
 
 function __lower_bound_n_usage() {
     var s = sequence([1, 2, 2, 2, 3, 3, 3, 4, 7, 9, 9], "s");
@@ -69,6 +84,15 @@ function __partitioned_n_usage() {
 }
 
 function __partitioned_n_attributes() {}
+
+function __upper_bound_usage() {
+    var s = sequence([1, 2, 2, 2, 3, 3, 3, 4, 7, 9, 9], "s");
+
+    var ub = upper_bound(begin(s), end(s), 3, lt);
+    print("Upper bound: " + source(ub));
+}
+
+function __upper_bound_attributes() {}
 
 function __upper_bound_n_usage() {
     var s = sequence([1, 2, 2, 2, 3, 3, 3, 4, 7, 9, 9], "s");
