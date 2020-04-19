@@ -10,6 +10,7 @@ function lower_bound(f, l, a, r) {
 }
 
 function __debug_lower_bound_n(f, n, a, r) {
+    //precondition: is_sorted_n(f, n, r);
     var p = function p(x) {
         return ! r(x, a);
     };
@@ -84,6 +85,7 @@ function upper_bound(f, l, a, r) {
 }
 
 function __debug_upper_bound_n(f, n, a, r) {
+    //precondition: is_sorted_n(f, n, r);
     var p = function(x) {
         return r(a, x);
     };
