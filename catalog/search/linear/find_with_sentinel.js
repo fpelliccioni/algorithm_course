@@ -1,12 +1,24 @@
 function find_with_sentinel(f, l, x) {
-    //TODO: pending
+    if (equal(f, l)) return f;
+    var pl = predecessor(l);
+    var pv = source(pl);
+    sink(pl, x);
+
+    f = find_unguarded(f, x);
+    if (equal(f, pl) && source(f) != pv) {
+        f = l
+    }
+
+    sink(pl, pv);
+    return f;
 }
 
 function usage() {
-    print(array_from("Hello, World!"))
-    var s = sequence(array_from("Hello, World!"), "s");
-    
-    var it = find_with_sentinel(begin(s), end(s), 'x');
+    // var s = sequence([5, 2, 7, 14, 81, 99], "s");
+    var s = sequence(array_random(), "s");
+    sink(successor(begin(s), size(s) / 2), 99);
+
+    var it = find_with_sentinel(begin(s), end(s), '99');
     if ( ! equal(it, end(s))) {
         print(source(it));
     }

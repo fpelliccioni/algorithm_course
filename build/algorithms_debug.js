@@ -1,3 +1,26 @@
+function __debug_partition_point_n(f, n, p) {
+    //precondition: partitioned_n(f, n, p)
+
+    while (n != 0) {
+        var h = half_nonnegative(n);
+        var m = successor(f, h);
+        if (p(source(m))) {
+            n = h;
+        } else {
+            n -= h + 1;
+            f = successor(m);
+        }
+    }
+    return f;
+}
+
+function partition_point_n(f, n, p) {
+    var _f_ = start_f('partition_point_n', f, n, p);
+    var res = __debug_partition_point_n(f, n, p);
+    end_f(_f_);
+    return res;
+}
+
 function __debug_find(f, l, x) {
     while ( ! equal(f, l) && source(f) != x) {
         f = successor(f)
@@ -44,7 +67,18 @@ function find_unguarded(f, x) {
 }
 
 function __debug_find_with_sentinel(f, l, x) {
-    //TODO: pending
+    if (equal(f, l)) return f;
+    var pl = predecessor(l);
+    var pv = source(pl);
+    sink(pl, x);
+
+    f = find_unguarded(f, x);
+    if (equal(f, pl) && source(f) != pv) {
+        f = l
+    }
+
+    sink(pl, pv);
+    return f;
 }
 
 function find_with_sentinel(f, l, x) {

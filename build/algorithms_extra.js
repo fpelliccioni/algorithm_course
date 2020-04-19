@@ -1,5 +1,6 @@
 function __catalog() {
-return {find: [ 'search/linear', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/linear/find.js' ],
+return {partition_point_n: [ 'search/binary', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/binary/partition_point_n.js' ],
+find: [ 'search/linear', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/linear/find.js' ],
 find_if: [ 'search/linear', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/linear/find_if.js' ],
 find_unguarded: [ 'search/linear', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/linear/find_unguarded.js' ],
 find_with_sentinel: [ 'search/linear', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/search/linear/find_with_sentinel.js' ],
@@ -9,6 +10,20 @@ min: [ 'selection', 'https://github.com/fpelliccioni/algorithm_course/blob/maste
 min_element: [ 'selection', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/selection/min_element.js' ],
 minmax_element: [ 'selection', 'https://github.com/fpelliccioni/algorithm_course/blob/master/catalog/selection/minmax_element.js' ],
 };}
+
+function __partition_point_n_usage() {
+    var p = predicate(function greater_than_3(x) { return x > 3; });
+    var s = sequence([1, 2, 2, 2, 3, 3, 3, 4, 7, 9, 9], "s", p);
+
+    var pp = partition_point_n(begin(s), size(s), p);
+    if ( ! equal(pp, end(s))) {
+        print("Partition point value is: " + source(pp));
+    } else {
+        print("Partition point is out of range");
+    }
+}
+
+function __partition_point_n_attributes() {}
 
 function __find_usage() {
     print(array_from("Hello, World!"))
@@ -47,10 +62,11 @@ function __find_unguarded_usage() {
 function __find_unguarded_attributes() {}
 
 function __find_with_sentinel_usage() {
-    print(array_from("Hello, World!"))
-    var s = sequence(array_from("Hello, World!"), "s");
-    
-    var it = find_with_sentinel(begin(s), end(s), 'x');
+    // var s = sequence([5, 2, 7, 14, 81, 99], "s");
+    var s = sequence(array_random(), "s");
+    sink(successor(begin(s), size(s) / 2), 99);
+
+    var it = find_with_sentinel(begin(s), end(s), '99');
     if ( ! equal(it, end(s))) {
         print(source(it));
     }
