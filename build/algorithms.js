@@ -3,9 +3,9 @@ function lower_bound(f, l, a, r) {
 }
 
 function lower_bound_n(f, n, a, r) {
-    var p = predicate(function p(x) {
+    var p = function p(x) {
         return ! r(x, a);
-    });
+    };
     return partition_point_n(f, n, p);
 }
 
@@ -42,9 +42,9 @@ function upper_bound(f, l, a, r) {
 }
 
 function upper_bound_n(f, n, a, r) {
-    var p = predicate(function p(x) {
+    var p = function(x) {
         return r(a, x);
-    });
+    };
     return partition_point_n(f, n, p);
 }
 
