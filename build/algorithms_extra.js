@@ -62,13 +62,13 @@ function __find_unguarded_usage() {
 function __find_unguarded_attributes() {}
 
 function __find_with_sentinel_usage() {
-    // var s = sequence([5, 2, 7, 14, 81, 99], "s");
     var s = sequence(array_random(), "s");
-    sink(successor(begin(s), size(s) / 2), 99);
 
     var it = find_with_sentinel(begin(s), end(s), '99');
     if ( ! equal(it, end(s))) {
         print(source(it));
+    } else {
+        print("element not found.")
     }
 }
 

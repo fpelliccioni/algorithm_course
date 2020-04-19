@@ -40,16 +40,16 @@ function find_unguarded(f, x) {
 
 function find_with_sentinel(f, l, x) {
     if (equal(f, l)) return f;
-    var pl = predecessor(l);
-    var pv = source(pl);
-    sink(pl, x);
+        
+    var tmp = source(predecessor(l));
+    sink(predecessor(l), x);
 
     f = find_unguarded(f, x);
-    if (equal(f, pl) && source(f) != pv) {
-        f = l
-    }
 
-    sink(pl, pv);
+    sink(predecessor(l), tmp);
+    if (equal(successor(f), l) && tmp != x) {
+        f = successor(f)
+    }
     return f;
 }
 
