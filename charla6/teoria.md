@@ -1,6 +1,6 @@
 # Binary Search - Búsqueda Binaria
 
-La idea de búsqueda binaria se origina en el [Teorema de Valor Intermedio](https://es.wikipedia.org/wiki/Teorema_del_valor_intermedio) [IVT](https://en.wikipedia.org/wiki/Intermediate_value_theorem) por sus siglas en inglés. También conocido como Teorema de [Bolzano](https://en.wikipedia.org/wiki/Bernard_Bolzano)-[Cauchy](https://en.wikipedia.org/wiki/Augustin-Louis_Cauchy):
+La idea de búsqueda binaria se origina en el [Teorema de Valor Intermedio](https://es.wikipedia.org/wiki/Teorema_del_valor_intermedio), [IVT](https://en.wikipedia.org/wiki/Intermediate_value_theorem) por sus siglas en inglés. También conocido como Teorema de [Bolzano](https://en.wikipedia.org/wiki/Bernard_Bolzano)-[Cauchy](https://en.wikipedia.org/wiki/Augustin-Louis_Cauchy):
 
 Si *f* es una [función continua](https://es.wikipedia.org/wiki/Funci%C3%B3n_continua) en un intervalo *[a, b]* tal que *f(a) < f(b)*, entonces, para todo *u* perteneciente a *[f(a), f(b)]* existe un *c* perteneciente a *[a, b]* tal que *u = f(c)*.
 
