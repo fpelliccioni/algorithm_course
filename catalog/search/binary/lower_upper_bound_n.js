@@ -2,8 +2,8 @@ function lower_upper_bound_n(f, n, a, r) {}
 
 function usage() {
     var a = 3;
-    var lbp = predicate(function p(x) {return ! r(x, a);});
-    var ubp = predicate(function p(x) {return r(a, x);});
+    var lbp = predicate(function p(x) {return ! (x < 3);});
+    var ubp = predicate(function p(x) {return 3 < x;});
 
     var s = sequence([1, 2, 2, 2, 3, 3, 3, 4, 7, 9, 9], "s", [lbp, ubp]);
 
